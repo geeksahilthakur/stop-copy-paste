@@ -78,7 +78,7 @@ Go ahead, try copying something—we dare you. 😏
 ## 🧙 **How to Install**
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/you-cant.git
+   https://github.com/geeksahilthakur/stop-copy-paste
    ```
 2. Open the `index.html` file in any browser.
 3. Laugh as you copy text and see the magic unfold. 🎩✨
