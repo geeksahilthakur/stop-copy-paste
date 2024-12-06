@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Can't</title>
+    <link rel="icon" type="image/x-icon" href="img.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .banner {
+            position: relative;
+            background-color: #FFD700;
+
+            /* background-color: #8A4FFF; */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 30px;
+            margin: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 2;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            background-color: #8A4FFF;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            left: 0;
+            top: 5px;
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .text-content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #ff3e3e;
+            font-weight: bold;
+        }
+
+        .keyboard-visual {
+            max-width: 300px;
+        }
+
+        .keyboard-visual img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .social-banner {
+            position: relative;
+            background-color: #FFD700;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 30px;
+            margin: 20px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        .social-banner::before {
+            content: '';
+            position: absolute;
+            background-color: #8A4FFF;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            left: 0;
+            top: 5px;
+            z-index: -1;
+        }
+
+        .social-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-link img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .keyboard-visual {
+                margin: 0 auto;
+            }
+
+            .banner, .social-banner {
+                margin: 10px;
+                font-size: 1.2rem;
+            }
+
+            .social-banner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">! = Ctrl+c && Ctrl+v</div>
+
+    <div class="content">
+        <div class="text-content">
+            <h1>Ah,</h1>
+            <p>so you've stumbled upon our little corner of the internet, where ctrl+c meets its match! You thought you could just waltz in here, grab our precious words, and strut away? Think again, digital pilferer!</p>
+            <p>Here's a newsflash: <span class="highlight">even cheating requires a mind</span>. So why not flex those brain muscles and create something original? Or are you too busy trying to copy this text right now? Go ahead, give it a shot. I'll wait... 😏</p>
+            <p>Remember, in the grand buffet of life, don't just be a copy-paste potato. Be the chef who whips up a gourmet meal of original ideas! Now, off you go. Learn, create, and maybe someday you'll write something people actually want to copy!</p>
+        </div>
+        <div class="keyboard-visual">
+            <img src="img.png" alt="Keyboard visual">
+        </div>
+    </div>
+
+    <div class="social-banner">
+        <a href="https://github.com/geeksahilthakur" class="social-link" target="_blank">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xNSAyMnYtNGE0LjggNC44IDAgMCAwLTEtMy41YzIuNS0uMSA1LTEgNS00IDAtLjktLjMtMS43LTEtMi4zLjEtLjYuNC0xLjguMS0yLjctLjMtLjEtMS41LjMtMy4xIDEuMmExMC43IDEwLjcgMCAwIDAtNiAwQzguOSA4LjMgNy44IDcuOSA3LjUgOGMtLjMuOS0uMiAyIC4xIDIuNy0uNy42LTEgMS40LTEgMi4zIDAgMyAyLjUgMy45IDUgNCEyIDEtLjkgMi0xIDMuNXY0Ii8+PHBhdGggZD0iTTkgMjJ2LTFhMiAyIDAgMCAwLTIuMi0yIDIgMiAwIDAgMC0xLjgtMiAyIDIgMCAwIDAtMiAydi0uNUEyIDIgMCAwIDAgMiAxNmgyLjVhMiAyIDAgMCAxIDIgMiIvPjwvc3ZnPg==" alt="GitHub">
+            geeksahilthakur
+        </a>
+        <a href="https://instagram.com/geeksahil" class="social-link" target="_blank">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgeD0iMiIgeT0iMiIgcng9IjUiLz48cGF0aCBkPSJNMTYgMTEuMzdBNCA0IDAgMSAxIDEyLjYzIDhhNCA0IDAgMCAxIDMuMzcgMy4zN3oiLz48bGluZSB4MT0iMTcuNSIgeTE9IjYuNSIgeDI9IjE3LjUxIiB5Mj0iNi41Ii8+PC9zdmc+" alt="Instagram">
+            geeksahil
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emoji = '💩';
+            const message = "oii pechoda kdo tk cpy paste krna tu , apna bna le kush ni ta tera kush ni bnna ...🤣🤣🤣";
+
+            document.addEventListener('copy', (e) => {
+                e.clipboardData.setData('text/plain', `${emoji} ${message}`);
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
